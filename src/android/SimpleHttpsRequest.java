@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 
 public class SimpleHttpsRequest extends CordovaPlugin {
-    // private static final String RES_TEMPLATE = "{\"status\": %d, \"data\": \"%s\", \"error\": \"%s\"}";
+    // private static final String RES_TEMPLATE = "{\"status\": %d, \"headers\": \"%s\", \"data\": \"%s\", \"error\": \"%s\"}";
 
     private void callbackMsg(CallbackContext callbackContext, String msg) {
         cordova.getActivity().runOnUiThread(new Runnable() {
@@ -168,8 +168,6 @@ public class SimpleHttpsRequest extends CordovaPlugin {
             ret.put("error", resError);
         } catch (Exception e) {
         }
-
-        // return String.format(RES_TEMPLATE, responseCode, "{}", "");
         return ret.toString();
     }
 
@@ -247,8 +245,6 @@ public class SimpleHttpsRequest extends CordovaPlugin {
             ret.put("error", resError);
         } catch (Exception e) {
         }
-
-        // return String.format(RES_TEMPLATE, responseCode, "{}", "");
         return ret.toString();
     }
 
