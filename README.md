@@ -46,6 +46,7 @@ cordova.plugins.simple.https.request.request(tUrl, tOptions, tCallback);
 
 ### 3.1 method
 GET, POST, PUT, DELETE, PATCH
+<br>
 default value is GET
 
 ### 3.2 params
