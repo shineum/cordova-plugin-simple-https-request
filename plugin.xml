@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+           id="cordova-plugin-simple-https-request"
+      version="0.0.1">
+    <name>SimpleHttpsRequest</name>
+    <description>Simple Https Request</description>
+    <license>MIT</license>
+    <keywords>cordova,http,https,rest,rest-api,android</keywords>
+    <repo>https://github.com/shineum/cordova-plugin-simple-https-request.git</repo>
+
+    <js-module src="www/simplehttpsrequest.js" name="SimpleHttpsRequest">
+        <clobbers target="cordova.plugins.simple.https.request" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SimpleHttpsRequest">
+                <param name="android-package" value="com.shineum.net.SimpleHttpsRequest" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <application android:usesCleartextTraffic="true"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        </config-file>
+
+        <source-file src="src/android/HttpsTrustManager.java" target-dir="src/com/shineum/net" />
+        <source-file src="src/android/SimpleHttpsRequest.java" target-dir="src/com/shineum/net" />
+    </platform>
+</plugin>

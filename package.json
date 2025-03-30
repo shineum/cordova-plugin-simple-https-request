@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-simple-https-request",
+  "version": "0.0.1",
+  "description": "Simple Https Request",
+  "cordova": {
+    "id": "cordova-plugin-simple-https-request",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shineum/cordova-plugin-simple-https-request.git"
+  },
+  "keywords": [
+    "cordova",
+    "http",
+    "https",
+    "request",
+    "rest",
+    "rest-api",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "shineum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shineum/cordova-plugin-simple-https-request/issues"
+  },
+  "homepage": "https://github.com/shineum/cordova-plugin-simple-https-request#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
