@@ -52,7 +52,8 @@ default value is GET
 ### 3.2 params
 This will be converted into QueryString
 
-For usage, url will be updated as 
+For usage case, url will be rendered as
+<br>
 https://services.odata.org/V3/OData/OData.svc/?$format=json
 
 ### 3.3 headers
@@ -63,16 +64,23 @@ request body
 
 ### 3.5 isHttpRequest (optional)
 boolean (true or false)
+<br>
 When URL scheme is "http", use this option
+<br>
 default value is false
 
 ### 3.6 ignoreSSL (optional)
 boolean (true or false)
+<br>
 When it is required to ignore SSL cretificate validation, use this option
-If this option is used, connection is unsecure.
+<br>
+Note. if this option is used, connection is unsecure.
+<br>
 default value is false
 
 ### 3.7 isResDataBinary (optional)
 boolean (true or false)
+<br>
 When it is needed to get response as binary data, use this option
+<br>
 Response data will be delivered as base64 encoded format
