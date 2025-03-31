@@ -24,7 +24,7 @@ const tOptions = {
     "ignoreSSL": false,
     "isResDataBinary": false
 };
-const tCallback = (ret) => { console.log(ret); };
+const tCallback = (res) => { alert(res.status + "\n" + res.data); };
 cordova.plugins.simple.https.request.request(tUrl, tOptions, tCallback);
 
 ```
@@ -44,19 +44,19 @@ cordova.plugins.simple.https.request.request(tUrl, tOptions, tCallback);
 
 # 3. Options
 
-### 3.1 method
+### 3.1 method (optional)
 GET, POST, PUT, DELETE, PATCH
 <br>
 default value is GET
 
-### 3.2 params
+### 3.2 params (optional)
 This will be converted into QueryString
 
 For usage case, url will be rendered as
 <br>
 https://services.odata.org/V3/OData/OData.svc/?$format=json
 
-### 3.3 headers
+### 3.3 headers (optional)
 Request headers
 
 ### 3.4 data (optional)
@@ -87,6 +87,9 @@ Response data will be delivered as base64 encoded format
 
 
 # history
+
+### 0.0.3
+- Update options
 
 ### 0.0.2
 - Update callback
