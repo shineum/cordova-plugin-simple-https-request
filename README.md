@@ -84,3 +84,17 @@ boolean (true or false)
 When it is needed to get response as binary data, use this option
 <br>
 Response data will be delivered as base64 encoded format
+
+
+# history
+
+### 0.0.2
+- Update callback
+
+### 0.0.1
+- Initial Release
+
+
+# License
+
+MIT
