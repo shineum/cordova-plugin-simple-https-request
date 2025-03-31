@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-simple-https-request",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple Https Request",
   "cordova": {
     "id": "cordova-plugin-simple-https-request",
