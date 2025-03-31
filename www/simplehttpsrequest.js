@@ -20,7 +20,7 @@ CordovaPluginSimpleHttpsRequest.prototype.request = function (pUrl, pOptions, pC
       let tReqProtocol = (tOptions.isHttpRequest || false) ? "httpRequest" : "httpsRequest";
       let tIsResDataBinary = tOptions.isResDataBinary || false;
       let tIgnoreCert = tOptions.ignoreSSL || false;
-      exec(pCallback, null, 'SimpleHttpsRequest', tReqProtocol, [pUrl, tOptions.method || "", tOptions.params || {}, tOptions.headers || {}, tData, tIsResDataBinary, tIgnoreCert]);
+      exec((pRet)=>{pCallback(JSON.parse(pRet));}, null, 'SimpleHttpsRequest', tReqProtocol, [pUrl, tOptions.method || "", tOptions.params || {}, tOptions.headers || {}, tData, tIsResDataBinary, tIgnoreCert]);
 };
 CordovaPluginSimpleHttpsRequest.prototype.get = function (pUrl, pOptions, pCallback) {
       let tOptions = pOptions || {};
